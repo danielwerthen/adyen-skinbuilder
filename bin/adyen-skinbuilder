@@ -32,4 +32,7 @@ Vegas::Runner.new(Adyen::SkinBuilder::Server, 'adyen-skinbuilder', opts) do |run
   opt.on('-i PATH', '--i18n PATH', 'Load i18n translations from given directory') do |path|
     opts[:i18n_path] = path
   end
+  opt.on('-l LOCALES', '--locales LOCALES', 'Set available locales') do |path|
+    opts[:locales] = path
+  end
 end
