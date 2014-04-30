@@ -136,7 +136,7 @@ module Adyen
           @locale_suffix = ''
           @skin.compile(render_skin(@skin))
 
-          settings.locales.each do |locale|
+          settings.locales.split(",").each do |locale|
             I18n.locale = locale
             @locale_suffix = "_#{locale}"
             @skin.compile(render_skin(@skin))
